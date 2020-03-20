@@ -92,10 +92,11 @@ final int REQ_CODE=1;
 
         if(auth.getCurrentUser()!=null){
             startActivity(new Intent(MainActivity.this,Main2Activity.class));
-
         }
 
+
     }
+
 
     private void firebaseLogin(GoogleSignInAccount account)
 

@@ -16,9 +16,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.common.internal.Constants;
+import com.google.android.gms.auth.api.Auth;
 import com.google.firebase.auth.FirebaseAuth;
-import com.squareup.picasso.Picasso;
+
 
 public class Main2Activity extends AppCompatActivity {
 FirebaseAuth obj;
@@ -36,18 +36,8 @@ obj=FirebaseAuth.getInstance();
 name=findViewById(R.id.name);
 email=findViewById(R.id.email);
 butto=findViewById(R.id.button);
-
-butto.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-
-    }
-});
-
 name.setText(obj.getCurrentUser().getDisplayName());
-if(obj.getCurrentUser().getPhoneNumber().trim().equals("")){
-    Toast.makeText(this, "Sorry", Toast.LENGTH_SHORT).show();
-}
+
 email.setText(obj.getCurrentUser().getEmail());
 
 
@@ -56,6 +46,10 @@ email.setText(obj.getCurrentUser().getEmail());
 
 
     }
+    public void display(String message,String title){
+        Toast.makeText(this, message+" "+title, Toast.LENGTH_SHORT).show();
+    }
+
 
 
     @Override
@@ -80,3 +74,4 @@ finishAffinity();
 
     }
 }
+
