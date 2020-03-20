@@ -25,9 +25,7 @@ FirebaseAuth obj;
 TextView name,phone,email;
 ImageView image;
 Button butto;
-public static final String CHANNEL_ID = "my_channel_01";
-public static final String CHANNEL_NAME = "Firebase Notification";
-public static final String CHANNEL_DESCRIPTION = "Firebase.com";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
