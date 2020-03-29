@@ -67,8 +67,7 @@ GoogleApiClient mGoogleApiClient;
         auth=FirebaseAuth.getInstance();
         boj=findViewById(R.id.button2);
         progressBar.setVisibility(View.VISIBLE);
-        mGoogleApiClient = new GoogleApiClient.Builder(getApplicationContext()) //Use app context to prevent leaks using activity
-                //.enableAutoManage(this /* FragmentActivity */, connectionFailedListener)
+        mGoogleApiClient = new GoogleApiClient.Builder(getApplicationContext())
                 .addApi(Auth.GOOGLE_SIGN_IN_API)
                 .build();
 
