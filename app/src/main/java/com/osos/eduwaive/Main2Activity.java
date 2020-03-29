@@ -30,45 +30,9 @@ Button butto;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-obj=FirebaseAuth.getInstance();
-name=findViewById(R.id.name);
-email=findViewById(R.id.email);
-butto=findViewById(R.id.button);
-name.setText(obj.getCurrentUser().getDisplayName());
-
-email.setText(obj.getCurrentUser().getEmail());
 
 
 
-
-
-
-    }
-    public void display(String message,String title){
-        Toast.makeText(this, message+" "+title, Toast.LENGTH_SHORT).show();
-    }
-
-
-
-    @Override
-    public void onBackPressed() {
-       // super.onBackPressed();
-
-      AlertDialog.Builder boj=new AlertDialog.Builder(Main2Activity.this)
-              .setTitle("Are YOu Sure You Want To Exit")
-              .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                  @Override
-                  public void onClick(DialogInterface dialog, int which) {
-                      dialog.dismiss();
-                  }
-              });
-      boj.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-          @Override
-          public void onClick(DialogInterface dialog, int which) {
-finishAffinity();
-          }
-      });
-      boj.show();
 
     }
 }
