@@ -86,16 +86,6 @@ final int REQ_CODE=1;
         }
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        if(auth.getCurrentUser()!=null){
-            startActivity(new Intent(MainActivity.this,Main2Activity.class));
-        }
-
-
-    }
 
 
     private void firebaseLogin(GoogleSignInAccount account)
@@ -121,7 +111,9 @@ final int REQ_CODE=1;
     }
 
 
-
-
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAffinity();
+    }
 }

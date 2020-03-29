@@ -102,7 +102,7 @@ Button boj;
             public void onClick(View v) {
                 auth.signOut();
                 Intent boj=new Intent(Main2Activity.this,MainActivity.class);
-                boj.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                boj.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 
                 startActivity(boj);
             }
